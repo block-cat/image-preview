@@ -1,0 +1,32 @@
+{
+  "name": "block-cat/image-preview",
+  "description": "Image preview in composer",
+  "keywords": [
+    "flarum"
+  ],
+  "type": "flarum-extension",
+  "license": "MIT",
+  "require": {
+    "flarum/core": "^0.1.0-beta.16"
+  },
+  "authors": [{
+    "name": "BlockCat"
+  },{
+    "name": "AradeId"
+  }],
+  "autoload": {
+    "psr-4": {
+      "BlockCat\\ImagePreview\\": "src/"
+    }
+  },
+  "extra": {
+    "flarum-extension": {
+      "title": "BkC Image Preview",
+      "icon": {
+        "name": "far fa-image",
+        "backgroundColor": "#083",
+        "color": "#fff"
+      }
+    }
+  }
+}

@@ -1,0 +1,175 @@
+@media @desktop-up {
+    // Modify Composer padding for more space on screen
+    .Composer-content {
+        .fullScreen & {
+            padding: 10px 20px;
+        }
+    }
+    // Place Editor and ImagePreview side by side
+    .TextEditor-editorContainer {
+        .fullScreen & {
+            display: flex;
+            column-gap: 15px;
+            width: 100%;
+            justify-content: space-between;
+
+            > div {
+                width: 100%;
+            }
+        }
+    }
+    .ComposerBody-imagePreview {
+        .fullScreen & {
+            margin: 0;
+            padding: 0;
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+            order: 1;
+        }
+    }
+    // ImagePreview style
+    .ImagePreview {
+        .fullScreen & {
+            display: block;
+            border: 3px dashed #667c99;
+            border-radius: 3px;
+            background: #e8ecf3;
+            position: relative;
+            max-height: 81vh;
+        }
+    }
+    // Style for prezented image
+    .ImagePreview-currentImage {
+        .fullScreen & {
+            display: block;
+            width: 100%;
+            max-height: 69vh;
+            overflow: hidden;
+            position: relative;
+
+            > img {
+                height: 100%;
+                width: 100%;
+                position: relative;
+                cursor: grab;
+                top: 0;
+                left: 0;
+                transition: top 100ms;
+                transition: left 100ms;
+            }
+        }
+    }
+    // Style for images list
+    .ImagePreview-listImage {
+        .fullScreen & {
+            column-gap: 5px;
+            display: flex;
+            overflow-x: auto;
+            margin: 5px;
+
+            img {
+                height: 50px;
+                width: 50px;
+                object-fit: cover;
+            }
+        }
+    }
+}
+.zoomButtons {
+    display: flex;
+    background: transparent;
+    opacity: 0.3;
+    position: absolute;
+    bottom: 5%;
+    left: 40%;
+    border-radius: 5px;
+
+    &:hover {
+        opacity: 1;
+    }
+
+    button {
+        width: 40px;
+        height: 40px;
+        padding: 0;
+        margin: 0;
+        background: border-box;
+        border: none;
+        user-select: none;
+
+        > i {
+            font-size: 30px;
+            color:#667c99;
+        }
+    }
+}
+
+button.Left {
+    left: 3%;
+    top: 48%;
+    position: absolute;
+    background: transparent;
+    opacity: 0.3;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    margin: 0;
+    background: border-box;
+    border: none;
+    user-select: none;
+
+    &:hover {
+        opacity: 1;
+    }
+
+    > i {
+        font-size: 30px;
+        color:#667c99;
+    }
+}
+
+button.Right {
+    right: 3%;
+    top: 48%;
+    position: absolute;
+    background: transparent;
+    opacity: 0.3;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    margin: 0;
+    background: border-box;
+    border: none;
+    user-select: none;
+
+    &:hover {
+        opacity: 1;
+    }
+
+    > i {
+        font-size: 30px;
+        color:#667c99;
+    }
+}
+
+@media @tablet-up {
+    // Padding for footer buttons
+    .TextEditor-controls {
+        .fullScreen & {
+            padding: 10px 0;
+        }
+    }
+    // Width of Composer
+    .Composer-content {
+        .fullScreen & {
+            max-width: 100%;
+        }
+    }
+}
+@media @tablet {
+    // Display none for tablet
+    .ComposerBody-imagePreview {
+        display: none;
+    }
+}
