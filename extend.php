@@ -21,5 +21,5 @@ return [
     
     new Extend\Locales(__DIR__ . '/resources/locale'),
     (new Extend\ApiSerializer(ForumSerializer::class))
-        ->mutate(Extenders\AddForumAttributes::class)
+        ->attributes(Extenders\AddForumAttributes::class)
 ];
