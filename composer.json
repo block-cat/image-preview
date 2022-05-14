@@ -7,7 +7,7 @@
   "type": "flarum-extension",
   "license": "MIT",
   "require": {
-    "flarum/core": "^1.0.2"
+    "flarum/core": "^1.2.0"
   },
   "authors": [{
     "name": "BlockCat"
@@ -22,7 +22,6 @@
   "extra": {
     "flarum-extension": {
       "title": "BkC Image Preview",
-      "category": "other",
       "icon": {
         "name": "far fa-image",
         "backgroundColor": "#083",
